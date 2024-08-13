@@ -1,0 +1,211 @@
+/* Estilos gerais do body e container */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(arqvs/bg.jpg);
+    background-size: cover; /* Faz com que a imagem cubra toda a div */
+    background-position: top; /* Centraliza a imagem na div */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+@font-face {
+    font-family: 'fontCs';
+    src: url('arqvs/MaldiniBold-OVZO6.ttf');
+}
+
+/* Estilos para o container original */
+#original-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* Estilos para o container novo */
+#new-container {
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+    background-image: url(arqvs/bg2.jpg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+/* Estilos para a lista de nomes */
+#name-input {
+    width: 90%;
+    height: 80px;
+}
+
+#name-display {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajusta a grid para os itens */
+    gap: 10px; /* Espaço entre os itens */
+    margin: 20px 0;
+    height: 250px; /* Ajusta a altura conforme necessário */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: #fff; /* Fundo branco para a lista */
+}
+
+/* Estilos para os itens da lista no #name-display */
+.name-item {
+    background:black;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+/* Estilos para o item ativo no #name-display */
+.name-item.active {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para o display dos novos nomes */
+#new-name-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 14px 0 15px 0;
+}
+
+/* Estilos para os itens da lista no #new-name-display */
+.new-name-item {
+    color: #000000;
+    padding: 25px 0 0 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transition: background 0.3s, transform 0.3s;
+    width: 135px;
+    margin: 0 3px;
+    height: 170px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    background-image: url('arqvs/imgicon.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a div */
+    background-position: center; /* Centraliza a imagem na div */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+
+/* Estilo para o item do meio (mais destacado) */
+.new-name-item.active {
+    font-weight: 800;
+    font-size: 18px;
+    background-image: url('arqvs/imgiconwin.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Faz com que a imagem cubra toda a div */
+    background-position: center; /* Centraliza a imagem na div */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fundo semitransparente */
+}
+
+.modal-content {
+    background-image: url(arqvs/imgiconwin.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 11% auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 15px;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+/* Estilo para o botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#buttons {
+    margin-top: 15px;
+}
+
+#add-name-btn, #sortear-btn {
+    cursor: pointer;
+    border: 0px solid rgba(187, 204, 0, 0);
+    font-family: "system-ui";
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
+    transition: 800ms;
+    width: 238px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px; border-radius: 25px; background: linear-gradient(90deg, rgb(89, 45, 175) 0%, rgb(35, 25, 54) 50%); font-weight: 500;
+}
+
+#add-name-btn:hover, #sortear-btn:hover{
+
+color: rgb(255, 255, 255);
+background: rgb(53, 2, 61) none repeat scroll 0% 0% / auto padding-box border-box;
+border-color: rgb(0, 187, 255);
+border-width: 0px;
+border-style: solid;
+}
+
+.sortear {
+    margin-top: 30px;
+}
+
+
+.svg {
+    height: 15px;
+    /* border-bottom: 1px solid black; */
+    margin-top: -15px;
+}
+
+.svg img {
+    width: 30px;
+    /* background-color: white; */
+    border-radius: 100%;
+}
+
+#winner-text {
+    font-size: 1.5rem;
+}
