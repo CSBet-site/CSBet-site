@@ -1,0 +1,102 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(img/bg_sem_logo.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#container {
+    background: #000000;
+    padding: 25px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+h1 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 25px 0;
+}
+
+#lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#gerarNumeros, #salvar {
+    font-size: 10px;
+    width: 50px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+}
+
+#salvar {
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px 20px;
+    width: auto;
+}
+
+#gerarNumeros:hover, #salvar:hover {
+    background-color: #555;
+}
+
+#nomeCliente {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+    resize: none; /* Impede que o usuário redimensione a textarea */
+    overflow: hidden; /* Esconde as barras de rolagem */
+}
+
+#areaText {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#numerosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#numerosContainer button {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#numerosContainer button.selected {
+    background-color: #460037;
+    border: 1px solid white;
+}

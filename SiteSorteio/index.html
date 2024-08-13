@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/icon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sorteio</title>
+</head>
+<body>
+    <div class="container" id="original-container">
+        <h1>Adicionar Participantes</h1>
+        <div id="name-display" style="display: none;">
+            <div class="name-list"></div>
+        </div>
+        <textarea id="name-input" placeholder="Digite um nome por linha."></textarea>
+        <div id="buttons">
+            <button id="add-name-btn" onclick="addNames()">Adicionar Nomes</button>
+            <button id="sortear-btn" onclick="startDraw()">Iniciar Sorteio</button>
+        </div>
+    </div>
+
+    <!-- Novo container com ID separado, inicialmente oculto -->
+    <div class="container" id="new-container" style="display: none;">
+        <h2>E O GANHADOR É...</h2>
+        
+        <div class="svg">
+            <img src="arqvs/svgUp.svg" alt="">
+        </div>
+        <div id="new-name-display">
+            <div class="new-name-list"></div>
+        </div>
+        <div class="svg">
+            <img src="arqvs/svgDown.svg" alt="">
+        </div>
+        <button id="sortear-btn" class="sortear" onclick="startDraw()">Sortear Novamente</button>
+    </div>
+
+    <!-- Modal para exibir o nome do ganhador -->
+    <div id="winner-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="winner-text">O Grande ganhador é:</p>
+        </div>
+    </div>
+    
+
+    <!-- Elemento de áudio oculto -->
+    <audio id="notification-audio" src="arqvs/audio.mp3" style="display: none;"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
